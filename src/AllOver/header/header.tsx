@@ -10,8 +10,8 @@ function Header() {
 
       <nav className={style.header_nav}>
         <h3>git search title</h3>
-        <Link to='/'>home</Link>
-        <Link to='/favorites'>fav</Link>
+        <Link to='/favorite_add/'>home</Link>
+        <Link to='/favorite_add/favorites'>fav</Link>
       </nav>
     </header>
   )

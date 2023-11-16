@@ -12,8 +12,8 @@ function App() {
     <>
     <Header />
       <Routes>
-        <Route path='/' element={<HomePage />}/>
-        <Route path='/favorites' element={<FavoritePage />}/>
+        <Route path='/favorite_add' element={<HomePage />}/>
+        <Route path='/favorite_add/favorites' element={<FavoritePage />}/>
       </Routes>
     </>
   )
