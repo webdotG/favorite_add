@@ -7,7 +7,7 @@ export const githubApi = createApi({
     baseUrl: 'https://api.github.com/'
   }),
   endpoints: build => ({
-    searchUsers: build.query<typeServerResponse<typeUser>, string>({
+    searchUsers: build.query<typeUser[], string>({
       query: (search: string) => ({
         url: 'search/users',
         params: {
@@ -15,7 +15,10 @@ export const githubApi = createApi({
           per_page: 5
         }
       })
-    })
+    }),
+    transformResponse: (response: typeServerResponse<typeUser>) => response.items
+      // console.log("RESPONSE TRANSFORMRESPONSE : ", response)
+    
   })
 })
 
