@@ -9,7 +9,7 @@ function Header() {
     <header>
 
       <nav className={style.header_nav}>
-        <h3>git search title</h3>
+        <h3>git search</h3>
         <Link to='/favorite_add/'>home</Link>
         <Link to='/favorite_add/favorites'>fav</Link>
       </nav>
