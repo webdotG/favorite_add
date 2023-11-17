@@ -9,7 +9,7 @@ function HomePage() {
   const [dropSearch, setDropSearch] = useState(false)
   const debounced = useDebounce(search)
   const { isLoading, isError, data } = useSearchUsersQuery(debounced, {
-    skip: debounced.length < 1,
+    skip: debounced.length < 2,
     refetchOnFocus: true,        //что бы автоматом делал запрос если давно не появлялся на странице
   })
   // console.log("DATA TRANSFORMRESPONSE : ", data)
@@ -25,7 +25,7 @@ function HomePage() {
 
   useEffect(() => {
     // console.log("DEBOUNCED : ", debounced)
-    setDropSearch(debounced.length > 1 && data?.length! > 0)
+    setDropSearch(debounced.length > 2 && data?.length! > 0)
   }, [debounced, data])
 
   
