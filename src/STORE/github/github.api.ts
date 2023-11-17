@@ -12,13 +12,12 @@ export const githubApi = createApi({
         url: 'search/users',
         params: {
           q: search,
-          per_page: 5
+          per_page: 10,
         }
-      })
-    }),
-    transformResponse: (response: typeServerResponse<typeUser>) => response.items
+      }),
+      transformResponse: (response: typeServerResponse<typeUser>) => response.items
       // console.log("RESPONSE TRANSFORMRESPONSE : ", response)
-    
+    }),
   })
 })
 
