@@ -11,13 +11,13 @@ function RepoCard({ repo }: { repo: typeRepositories }) {
   const { favorites } = useAppSelector(state => state.github)
   const [isFavorite, setIsFavorite] = useState(favorites.includes(repo.html_url))
 
-  const addToFavorite = (event: MouseEvent<HTMLButtonElement>) => {
+  const addToFavorite = (event:  React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault()
     addFavorite(repo.html_url)
     setIsFavorite(true)
     // setIsFavorite(!isFavorite)
   }
-  const removeFromFavorite = (event: MouseEvent<HTMLButtonElement>) => {
+  const removeFromFavorite = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault()
     removeFavorite(repo.html_url)
     setIsFavorite(false)
