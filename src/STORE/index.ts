@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { githubApi } from './github/github.api'
+import {setupListeners} from '@reduxjs/toolkit/query'
 
 
 const store = configureStore({
@@ -11,3 +12,5 @@ const store = configureStore({
 export type RootState = ReturnType<typeof store.getState>
 
 export default store
+
+setupListeners(store.dispatch)
