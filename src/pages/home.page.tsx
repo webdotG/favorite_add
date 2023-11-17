@@ -55,6 +55,7 @@ function HomePage() {
       </div>
         <div className={style.repos_username_item}>
         {areRepositories && <p>repositories loading......</p>}
+        { repositories?.map(repo => <p>{repo.url}</p>)}
         </div>
     </div>
   )
