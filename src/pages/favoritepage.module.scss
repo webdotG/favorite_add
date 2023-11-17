@@ -1,0 +1,35 @@
+
+@media (min-width: 320px) {
+  
+  .favorite_wrapper{
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 300px;
+    margin:  0 auto;
+  }
+
+  .favorite_list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    .favorite_item{
+      padding-top: 15px;
+      padding-bottom: 10px;
+      padding-left: 5px;
+      padding-right: 5px;
+      margin-bottom: 10px;
+      border-bottom:  2px solid black;
+
+      a{
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    
+  }
+
+}

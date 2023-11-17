@@ -11,4 +11,27 @@
       text-decoration: none;
     }
   }
+
+  .btn_wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btn_favorite_add{
+    padding: 5px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border: 2px solid black;
+    border-radius: 6px;
+    background-color: transparent;
+  }
+  
+  .btn_favorite_remove{
+    padding: 5px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border: 2px solid tomato;
+    border-radius: 6px;
+    background-color: transparent;
+  }
 }
