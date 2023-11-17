@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useLazyGetUserRepositoriesQuery, useSearchUsersQuery } from "../STORE/github/github.api"
 import { useDebounce } from "../hooks/debounce"
 import style from './homepage.module.scss'
+import RepoCard from "../AllOver/repoCrad/repoCard"
 
 function HomePage() {
   const [search, setSearch] = useState('')
@@ -18,6 +19,7 @@ function HomePage() {
   const clickHandler = (username: string) => {
     // console.log("USER NAME CLICK : ", username)
     fetchRepositories(username)
+    setDropSearch(false)
   }
 
 
@@ -55,7 +57,7 @@ function HomePage() {
       </div>
         <div className={style.repos_username_item}>
         {areRepositories && <p>repositories loading......</p>}
-        { repositories?.map(repo => <p>{repo.url}</p>)}
+        { repositories?.map(repo => (<RepoCard key={repo.id} repo={repo} />))}
         </div>
     </div>
   )

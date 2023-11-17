@@ -1,0 +1,66 @@
+@media (min-width:320px) {
+
+  .homepage_wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search_wrapper {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    input {
+      padding: 10px;
+      width: 100%;
+      border: 2px solid black;
+      border-radius: 10px;
+      font-size: 18px;
+      letter-spacing: 0.7px;
+    }
+  }
+
+  .dropSearch_wrapper {
+    padding: 0;
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 280px;
+    max-height: 200px;
+    position: absolute;
+    top: 44px;
+    left: -4px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px -2px black;
+    list-style-type: none;
+    overflow-y: scroll;
+  }
+
+  .dropSearch_item{
+    padding: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+  }
+
+
+  .repos_username_item{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 300px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+
+}
